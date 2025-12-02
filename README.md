@@ -11,27 +11,27 @@ Official Homebrew tap for Spry tools.
 
 ## Installation
 
-First, add the tap to Homebrew:
+### Option 1: Install directly (without tapping)
 
 ```bash
-brew tap programmablemd/homebrew-packages
+brew install programmablemd/packages/spry-sqlpage
+brew install programmablemd/packages/spry-runbook
 ```
 
-Then, install the desired package(s):
+### Option 2: Install from this tap
 
 ```bash
 # Add the tap
 brew tap programmablemd/homebrew-packages
+
+# Install spry-runbook and spry-runbook
+brew install spry-sqlpage spry-runbook
 
 # Install spry-sqlpage
 brew install spry-sqlpage
 
 # Install spry-runbook
 brew install spry-runbook
-
-# Or install directly without tapping
-brew install programmablemd/packages/spry-sqlpage
-brew install programmablemd/packages/spry-runbook
 ```
 
 ## Usage
