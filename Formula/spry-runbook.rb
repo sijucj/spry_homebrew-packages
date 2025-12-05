@@ -15,7 +15,7 @@ class SpryRunbook < Formula
   end
 
   on_linux do
-    url "https://github.com/programmablemd/packages/releases/download/v0.90.0/spry-runbook_0.90.0-ubuntu22.04u1_amd64.deb"
+    url "https://github.com/programmablemd/packages/releases/download/v0.90.0/spry-sqlpage_0.90.0-ubuntu22.04u1_amd64.deb"
     sha256 "427e449fb6c24c1b0eb48ddd83c3c65c1f8002674dca80886d4df099360808ba"
   end
 
@@ -24,7 +24,7 @@ class SpryRunbook < Formula
       bin.install "spry-runbook-macos" => "spry-runbook"
     elsif OS.linux?
       # For Linux, extract the DEB package using dpkg-deb
-      system "dpkg-deb", "-x", "spry-runbook_0.90.0-ubuntu22.04u1_amd64.deb", "."
+      system "dpkg-deb", "-x", "spry-sqlpage_0.90.0-ubuntu22.04u1_amd64.deb", "."
       bin.install "usr/bin/spry-runbook"
     end
   end
