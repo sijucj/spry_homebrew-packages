@@ -87,7 +87,7 @@ sed -i "s/version \".*\"/version \"${VERSION}\"/" "$RUNBOOK_FORMULA"
 sed -i "s|v[0-9]\+\.[0-9]\+\.[0-9]\+|v${VERSION}|g" "$RUNBOOK_FORMULA"
 
 # update .deb filename
-sed -i "s|spry-sqlpage_.*-ubuntu22.04u1_amd64.deb|spry-runbook_${VERSION}-ubuntu22.04u1_amd64.deb|g" "$RUNBOOK_FORMULA"
+sed -i "s|spry-sqlpage_.*-ubuntu22.04u1_amd64.deb|spry-sqlpage_${VERSION}-ubuntu22.04u1_amd64.deb|g" "$RUNBOOK_FORMULA"
 
 # macOS SHA (first sha256)
 sed -i "0,/sha256 \".*\"/{s/sha256 \".*\"/sha256 \"${RUNBOOK_MAC_SHA}\"/}" "$RUNBOOK_FORMULA"
