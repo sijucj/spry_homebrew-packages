@@ -10,13 +10,13 @@ class Spry < Formula
       sha256 "39c5f443cd5d674e3daf7d1b46c859debf00ad6201415a0275a3c53a6a8835f8"
     else
       url "https://github.com/programmablemd/packages/releases/download/v0.100.7/spry-macos.tar.gz"
-      sha256 "452e879cb8b2040b09d9bf40a47b49ceeb9d9dcf14ddbe15d9298c960eb452fc"
+      sha256 "39c5f443cd5d674e3daf7d1b46c859debf00ad6201415a0275a3c53a6a8835f8"
     end
   end
 
   on_linux do
     url "https://github.com/programmablemd/packages/releases/download/v0.100.7/spry-sqlpage_0.100.7-ubuntu22.04u1_amd64.deb"
-    sha256 "8fc97288dbc5259e30b48fe25438993698f8e834fd9904f7f191248d91e23de1"
+    sha256 "9e108631311556f591057489f5047505792d35d905da552a9c4cb58ca01dd70b"
   end
 
   def install
