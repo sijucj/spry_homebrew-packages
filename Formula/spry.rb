@@ -1,16 +1,16 @@
-class SpryRunbook < Formula
-  desc "Spry Runbook CLI - A runbook execution tool"
+class Spry < Formula
+  desc "Spry CLI - A declarative web application framework"
   homepage "https://github.com/programmablemd/packages"
   version "0.90.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/programmablemd/packages/releases/download/v0.90.0/spry-runbook-macos.tar.gz"
-      sha256 "b6d9ff5e2c48a5c37d050734b6453db573ad31016a8bd34a75c8813c64f514f0"
+      url "https://github.com/programmablemd/packages/releases/download/v0.90.0/spry-macos.tar.gz"
+      sha256 "452e879cb8b2040b09d9bf40a47b49ceeb9d9dcf14ddbe15d9298c960eb452fc"
     else
-      url "https://github.com/programmablemd/packages/releases/download/v0.90.0/spry-runbook-macos.tar.gz"
-      sha256 "b6d9ff5e2c48a5c37d050734b6453db573ad31016a8bd34a75c8813c64f514f0"
+      url "https://github.com/programmablemd/packages/releases/download/v0.90.0/spry-macos.tar.gz"
+      sha256 "452e879cb8b2040b09d9bf40a47b49ceeb9d9dcf14ddbe15d9298c960eb452fc"
     end
   end
 
@@ -21,16 +21,16 @@ class SpryRunbook < Formula
 
   def install
     if OS.mac?
-      bin.install "spry-runbook-macos" => "spry-runbook"
+      bin.install "spry-macos" => "spry"
     elsif OS.linux?
       # For Linux, extract the DEB package using dpkg-deb
       system "dpkg-deb", "-x", "spry-sqlpage_0.90.0-ubuntu22.04u1_amd64.deb", "."
-      bin.install "usr/bin/spry-runbook"
+      bin.install "usr/bin/spry"
     end
   end
 
   test do
-    system "#{bin}/spry-runbook", "--version"
+    system "#{bin}/spry", "--version"
   end
 end
 
