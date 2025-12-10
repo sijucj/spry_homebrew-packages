@@ -7,16 +7,16 @@ class Spry < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/programmablemd/packages/releases/download/v0.102.0/spry-macos.tar.gz"
-      sha256 "f29b251b11fd385ee649ae90706232da08c1e1970e5d9265301c23f2e1eadb9e"
+      sha256 "6a7ee67d523206152b8b810fef0144f175b6b778557bfa53915bb3beec6d6b46"
     else
       url "https://github.com/programmablemd/packages/releases/download/v0.102.0/spry-macos.tar.gz"
-      sha256 "f29b251b11fd385ee649ae90706232da08c1e1970e5d9265301c23f2e1eadb9e"
+      sha256 "6a7ee67d523206152b8b810fef0144f175b6b778557bfa53915bb3beec6d6b46"
     end
   end
 
   on_linux do
     url "https://github.com/programmablemd/packages/releases/download/v0.102.0/spry_0.102.0-ubuntu22.04u1_amd64.deb"
-    sha256 "a9793e5cec9e1379ce1cf12f0152daabdece1f66ba26f966ac52789e72cdc68d"
+    sha256 "bfb15973ae2703bd53b9a679b72d76d54fba6b498650ee4f0ffb94b9357ed885"
   end
 
   def install
