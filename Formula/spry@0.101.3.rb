@@ -1,4 +1,4 @@
-class SpryAT0_101_3 < Formula
+class SpryAT01013 < Formula
   desc "Spry CLI - A declarative web application framework"
   homepage "https://github.com/programmablemd/packages"
   version "0.101.3"

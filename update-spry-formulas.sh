@@ -92,8 +92,9 @@ echo ""
 # =======================================================
 echo "✍️ Creating versioned formula: $SPRY_VERSIONED_FORMULA"
 
-# Convert version to class name (e.g., 0.100.7 -> AT0_100_7)
-VERSION_CLASS=$(echo "$VERSION" | sed 's/\./_/g')
+# Convert version to class name (e.g., 0.100.7 -> SpryAT0100107)
+# Homebrew expects: remove dots and prefix with AT
+VERSION_CLASS=$(echo "$VERSION" | tr -d '.')
 
 cat > "$SPRY_VERSIONED_FORMULA" << EOF
 class SpryAT${VERSION_CLASS} < Formula
