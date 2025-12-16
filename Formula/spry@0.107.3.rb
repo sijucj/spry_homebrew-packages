@@ -1,4 +1,4 @@
-class Spry < Formula
+class SpryAT01073 < Formula
   desc "Spry CLI - A declarative web application framework"
   homepage "https://github.com/programmablemd/packages"
   version "0.107.3"
@@ -33,4 +33,3 @@ class Spry < Formula
     system "#{bin}/spry", "--version"
   end
 end
-
