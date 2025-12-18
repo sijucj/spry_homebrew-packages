@@ -150,9 +150,6 @@ rm -f "$SPRY_MAC" "$SPRY_DEB"
 # =======================================================
 echo "📦 Committing changes to git..."
 
-git config user.name "github-actions"
-git config user.email "github-actions@github.com"
-
 git add "$SPRY_FORMULA" "$SPRY_VERSIONED_FORMULA"
 git commit -m "Bump Spry formula to ${VERSION}"
 git push
