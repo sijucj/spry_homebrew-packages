@@ -1,0 +1,19 @@
+name: Update Spry Homebrew Formula
+
+on:
+  repository_dispatch:
+    types: [spry_release]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run update script
+        run: |
+          chmod +x update-spry-formulas.sh
+          ./update-spry-formulas.sh "${{ github.event.client_payload.version }}"
