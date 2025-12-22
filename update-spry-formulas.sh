@@ -15,7 +15,7 @@ set -e
 # Then commits & pushes changes.
 # ---------------------------------------------
 
-VERSION="$1"
+VERSION=${1#v}
 
 if [ -z "$VERSION" ]; then
   echo "❌ ERROR: version not provided"
