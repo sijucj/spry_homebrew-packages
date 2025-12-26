@@ -125,7 +125,8 @@ class SpryAT${VERSION_CLASS} < Formula
       # For Linux, extract the DEB package using dpkg-deb
       system "dpkg-deb", "-x", "spry_${VERSION}-ubuntu22.04u1_amd64.deb", "."
       bin.install "usr/bin/spry"
-      man1.install "usr/share/man/man1/spry.1.gz"
+      system "gunzip", "usr/share/man/man1/spry.1.gz"
+      man1.install "usr/share/man/man1/spry.1"
     end
   end
 
