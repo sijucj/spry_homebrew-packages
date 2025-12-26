@@ -29,13 +29,14 @@ class Spry < Formula
       bin.install "spry-macos" => "spry"
       resource("manpage").stage do
         system "dpkg-deb", "-x", "spry_1.0.0-ubuntu22.04u1_amd64.deb", "."
-        man1.install Dir["usr/share/man/man1/*.1.gz"]
+        man1.install "usr/share/man/man1/spry.1.gz"
       end
     elsif OS.linux?
-      # For Linux, extract the DEB package using dpkg-deb
-      system "dpkg-deb", "-x", "spry_1.0.0-ubuntu22.04u1_amd64.deb", "."
-      bin.install "usr/bin/spry"
-      man1.install Dir["usr/share/man/man1/*.1.gz"]
+      resource("manpage").stage do
+        system "dpkg-deb", "-x", "spry_1.0.0-ubuntu22.04u1_amd64.deb", "."
+        bin.install "usr/bin/spry"
+        man1.install "usr/share/man/man1/spry.1.gz"
+      end
     end
   end
 
