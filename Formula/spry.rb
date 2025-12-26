@@ -4,8 +4,6 @@ class Spry < Formula
   version "1.0.0"
   license "MIT"
 
-  bottle :unneeded
-
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/programmablemd/packages/releases/download/v1.0.0/spry-macos.tar.gz"
